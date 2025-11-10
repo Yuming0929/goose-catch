@@ -1,5 +1,7 @@
 # 抓大鹅 React + R3F
 
+[在线预览(大陆地区无法正常访问)](https://goose-catch.vercel.app/)
+
 ![预览](./public/goose1.png)
 
 
