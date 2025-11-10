@@ -7,13 +7,8 @@ import Bag from "./components/Bag";
 const Experience = () => {
 
     const gamePhase = useGameStore((state) => state.gamePhase);
-
-
-
     const attractorStrength = 0.1
-    // const gravityY = -9;
-    // const [attractorStrength, setAttractorStrength] = useState(0.1);
-    // const [gravityY, setGravityY] = useState(-9);
+
 
     return <>
 

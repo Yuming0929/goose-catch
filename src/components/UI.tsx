@@ -18,16 +18,9 @@ const UI = () => {
     return (
         <>
             {(gamePhase !== 'playing') && (
-
                 <div className='ui-container'>
-
                     <div className="menu">
-
-
                         <div className="title">抓大鹅 - R3F</div>
-                        
-
-
                         {gamePhase === 'ready' && (
                             <button onClick={handleStart}><Play size={20}/>开始</button>
                         )}
@@ -36,8 +29,6 @@ const UI = () => {
                                 
                                 <button onClick={handleResume}><Play size={20}/>继续</button>
                                 <button onClick={handleStartOver}><RotateCcw size={20}/>重来</button>
-                                
-                                
                             </>
                         )}
                         {(gamePhase === 'win' || gamePhase === 'gameover') && (
@@ -47,18 +38,16 @@ const UI = () => {
                                     <div className="loss-title">游戏结束！可惜可惜</div>}
                                 <button onClick={handleStartOver}><RotateCcw size={20}/>再来</button>
                             </>
-
                         )}
-
                         <footer>
                             <div className="footer-text"><a
                                 href="https://yuminghuang.com"
                                 target="_blank"
                             >@Yuming Huang</a></div>
                             <div className="footer-text"><a
-                                href=""
+                                href="https://github.com/Yuming0929/goose-catch/tree/main"
                                 target="_blank"
-                            >Github</a></div>
+                            >Github Repo</a></div>
                         </footer>
                     </div>
                 </div>

@@ -1,5 +1,6 @@
-import { Perf } from 'r3f-perf'
-import { Canvas } from '@react-three/fiber'
+// import { Perf } from 'r3f-perf'
+import { Canvas, } from '@react-three/fiber'
+// import { OrbitControls } from '@react-three/drei'
 import Experience from './Experience'
 import { Loader, useProgress } from '@react-three/drei'
 import { useGameStore } from './stores/useGameStore'
@@ -32,7 +33,7 @@ function App() {
         >
 
           <Suspense fallback={null} >
-            <Perf position="top-left" />
+            {/* <Perf position="top-left" /> */}
             {/* <Grid args={[10, 10]} sectionSize={1} infiniteGrid={false} /> */}
             {/* <PerspectiveCamera makeDefault position={[0, 8, 0]} /> */}
             {/* <OrbitControls /> */}

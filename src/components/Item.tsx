@@ -213,7 +213,6 @@ const Item = ({ id, position, object, delay, type }: ItemComponentProps) => {
                             const t = api.translation();
                             startPosRef.current.set(t.x, t.y, t.z);
                         } else if (selectedMesh.current) {
-                            // 回退：从场景图读取世界坐标
                             selectedMesh.current.getWorldPosition(startPosRef.current);
                         }
                         selectedMesh.current = e.object;
@@ -222,7 +221,6 @@ const Item = ({ id, position, object, delay, type }: ItemComponentProps) => {
                         if (nextPosition) {
                             targetRef.current.set(nextPosition.x, nextPosition.y, nextPosition.z);
                         } else {
-                            // 超出容量，结束游戏
                             lose();
                         }
                         setPicked(true);

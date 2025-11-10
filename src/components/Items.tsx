@@ -22,14 +22,8 @@ useGLTF.preload(sandwichToastUrl);
 useGLTF.preload(pancakeBigUrl);
 
 const Items = () => {
-
-
     const phase = useGameStore((state: { gamePhase: string }) => state.gamePhase);
     const totalItems = useGameStore((state) => state.totalItems);
-
-
-
-
     const models = useMemo(() => ({
 
         iceCreame: useGLTF(iceCreameUrl),
@@ -43,26 +37,19 @@ const Items = () => {
 
     const items = useMemo(() => Array.from({ length: totalItems }, (_, i) => ({
         id: i,
-        pos: [((i % 10) - 5) * 0.3, // x轴，间隔0.6
-        Math.floor(i / 10) * 0.6 + 1, // y轴，间隔0.6，从1开始
-        (Math.floor(i / 50) - 0.5) * 0.3 // z轴，间隔0.6
+        pos: [((i % 10) - 5) * 0.3, 
+        Math.floor(i / 10) * 0.6 + 1,
+        (Math.floor(i / 50) - 0.5) * 0.3
         ],
         delay: (i / 90) * 1000,
         type: i % 7,
     })), []);
-
-
-    // if (phase !== 'playing') return null;
-
-
     return (
         <>
             {   
             
                 phase === 'playing' || phase === 'paused' ? 
                 (
-
-
                     <group >
                         {items.map(({ id, pos, delay, type }, i) => (
                             <Item
@@ -75,13 +62,9 @@ const Items = () => {
                             />
                         ))}
                     </group>
-                
             ) : null
             }
-
         </>
     );
-
 }
-
 export default Items;

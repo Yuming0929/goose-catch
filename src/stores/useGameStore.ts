@@ -30,9 +30,9 @@ interface GameState {
 
 export const useGameStore = create<GameState>((set, get) => ({
     gamePhase: 'ready',
-    time: 180,
-    totalItems: 63 ,
-    itemsLeft: 63,
+    time: 120,
+    totalItems: 3 * 7 *5,
+    itemsLeft: 3 * 7 * 5,
     bagCapacity: 6,
     bagItemsCount: 0,
     bagItems: [],
